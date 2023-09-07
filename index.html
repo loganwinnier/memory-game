@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Memory Game!</title>
+  <link rel="stylesheet" href="memory-game.css" />
+</head>
+
+<body>
+  <h1 class="">Memory Game!</h1>
+  <button id="start">Click to start</button>
+
+  <div id="difficulty-screen" class="hidden">
+    <h1>Pick a difficulty</h1>
+    <ul class="buttons">
+      <button id="easy">Easy</button>
+      <button id="medium">Medium</button>
+      <button id="hard">Hard</button>
+    </ul>
+  </div>
+
+  <div id="win-screen" class="hidden">
+    <h1 id="win-text">You Win</h1>
+    <h2>play again?</h2>
+    <h2 id="win-guess">Guesses:</h2>
+    <div id="restart">
+      <h2>restart</h2>
+      <img src="Asset 2.svg" alt="restart" id="logo">
+    </div>
+  </div>
+
+  <div id="high-guess">
+    <h2 id="guesses">Guesses: </h2>
+    <h2 id="high-score">High Score: </h2>
+  </div>
+
+  <div id="game" class=""></div>
+
+
+  <script src="memory-game.js"></script>
+</body>
+
+</html>

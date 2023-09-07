@@ -1,0 +1,218 @@
+/* you can add to or change this. */
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  font-size: 20%;
+  background: linear-gradient(-225deg, #3fbdbe, #0e6569 45%);
+}
+
+h1 {
+  margin-top: -20vh;
+  font-size: 7rem;
+  color: #172e34;
+  filter: drop-shadow(2px 2px 45px white);
+}
+
+#high-guess {
+  margin-top: -2em;
+  margin-bottom: 5%;
+  font-size: 2rem;
+  display: flex;
+  color: white;
+}
+
+#guesses,
+#high-score {
+  margin: -4em 1.5em
+}
+
+#start {
+  height: 5em;
+  font-size: 2rem;
+
+  color: #172e34;
+  border: 4px solid #172e34;
+  transition: ease-in-out 500ms;
+}
+
+#start:hover {
+  font-size: 1.85rem;
+
+  background-color: #0e6569;
+  color: white;
+  border: 4px solid white;
+  opacity: 80%;
+}
+
+#game {
+  min-width: 80vw;
+  max-height: 50vh;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3em;
+}
+
+.card {
+  min-width: 100%;
+  min-height: 7.5rem;
+  border: 4px solid rgba(0, 0, 0, 50%);
+}
+
+.face-down {
+  background-color: grey !important;
+  transition: 200ms ease-out;
+
+}
+
+.hidden {
+  display: none;
+  z-index: -100;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#win-screen {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 70%);
+  filter: drop-shadow(1px 2px 50% black);
+}
+
+#win-screen h1 {
+  margin-top: -20%;
+  color: slategray;
+  font-size: 12rem;
+  transition: 1s ease-in;
+  filter: none;
+}
+
+#win-screen h2 {
+  margin-top: -2em;
+  color: white;
+  font-size: 4rem;
+}
+
+#win-screen #win-guess {
+  margin-top: -.75em;
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    color: white;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    color: white;
+  }
+}
+
+#restart {
+  margin-top: 7%;
+  width: 18rem;
+}
+
+#logo {
+  width: 100%;
+}
+
+/* Start Screen */
+
+#difficulty-screen {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 90vh;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 50%);
+  padding-top: 20%;
+
+}
+
+#difficulty-screen h1 {
+  filter: drop-shadow(2px 2px 45px black);
+  color: #3fbdbe
+}
+
+.buttons {
+  padding-top: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+button {
+  height: 8em;
+  width: 12em;
+  margin: 0 3%;
+  font-size: 8em;
+  font-weight: 700;
+  color: #0D0D0D;
+  transition: ease 600ms;
+}
+
+button:hover {
+  font-size: 8.5em;
+}
+
+
+#start-screen h1 {
+  padding: 4% 7%;
+  margin: -3% 2%;
+  width: 70%;
+  font-size: 9rem;
+  color: whitesmoke;
+  filter: drop-shadow(1px 1px 100px black);
+}
+
+#easy {
+  background-color: rgba(3, 140, 62, 1);
+}
+
+#easy:hover {
+  background-color: rgb(14, 161, 78);
+}
+
+#medium {
+  background-color: rgba(242, 159, 5, 1);
+}
+
+#medium:hover {
+  background-color: rgb(237, 174, 56);
+
+}
+
+#hard {
+  background-color: rgba(242, 65, 65, 1);
+}
+
+#hard:hover {
+  background-color: rgb(196, 64, 64);
+}
